@@ -1,0 +1,8 @@
+<p [ngSwitch]="isClock"
+   (contextmenu)="switchClockCalendar()"
+   (mouseover)="switchBGColor()"
+   (mouseleave)="setDefaultBGColor()"
+   [ngStyle]="{'background-color': bgColor}">
+  <app-clock *ngSwitchCase="true" [time]="time"></app-clock>
+  <app-calendar *ngSwitchCase="false" [time]="time"></app-calendar>
+</p>
