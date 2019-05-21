@@ -6,6 +6,8 @@ import { ClockCalendarComponent } from './clock-calendar/clock-calendar.componen
 import { WeatherComponent } from './weather/weather.component';
 import { ClockComponent } from './clock/clock.component';
 import { CalendarComponent } from './calendar/calendar.component';
+import { HttpClientModule } from '@angular/common/http';
+import { WeatherrequestService } from './services/weatherrequest.service';
 
 @NgModule({
   declarations: [
@@ -16,9 +18,10 @@ import { CalendarComponent } from './calendar/calendar.component';
     CalendarComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [WeatherrequestService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

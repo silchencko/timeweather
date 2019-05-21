@@ -1,3 +1,9 @@
-<p>
-  weather works!
-</p>
+<div class="weather">
+  <p class="city"> {{ weatherInfo.name }} </p>
+  <p class="temperature">
+    <img class="icon" src="{{ weatherInfo.iconSrc }}" alt="weatherLogo">
+    <span>{{ weatherInfo.main.temp }} &deg;С</span>
+  </p>
+</div>
+
+

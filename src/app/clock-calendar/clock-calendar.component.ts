@@ -31,7 +31,7 @@ export class ClockCalendarComponent implements OnInit {
     this.bgColor = 'transparent';
   }
   switchBGColor() {
-    this.timerId = setInterval(() => {
+    this.timerId = window.setInterval(() => {
       this.bgColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
       }, 1000);
   }
